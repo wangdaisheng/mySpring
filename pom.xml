@@ -7,7 +7,7 @@
     <groupId>mySpring</groupId>
     <artifactId>mySpring</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
 
     <name>mySpring Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
@@ -34,47 +34,79 @@
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+
+
     </dependencies>
 
+    <scm>
+        <connection>scm:git:https://github.com/wangdaisheng/mySpring.git</connection>
+        <developerConnection>scm:git:https://github.com/wangdaisheng/mySpring.git
+        </developerConnection>
+        <url>https://github.com/wangdaisheng/mySpring.git</url>
+        <tag>HEAD</tag>
+    </scm>
 
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <!-- maven-release-plugin插件配置 -->
     <build>
-        <finalName>mySpring</finalName>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-            <plugins>
-                <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>3.2.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
-                </plugin>
+        <pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagBase>https://github.com/wangdaisheng/mySpring.git</tagBase>
+                    <connectionUrl>https://github.com/wangdaisheng/mySpring.git</connectionUrl>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <preparationGoals>clean deploy</preparationGoals>
+                </configuration>
+            </plugin>
 
-            </plugins>
+        </plugins>
         </pluginManagement>
-
     </build>
+
 
 
 </project>
