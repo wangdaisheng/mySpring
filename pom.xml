@@ -42,7 +42,7 @@
         <developerConnection>scm:git:https://github.com/wangdaisheng/mySpring.git
         </developerConnection>
         <url>https://github.com/wangdaisheng/mySpring.git</url>
-        <tag>mySpring-1.0</tag>
+        <tag>mySpring-1.0.1</tag>
     </scm>
 
 
