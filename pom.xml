@@ -46,16 +46,16 @@
     </scm>
 
 
-    <!--<distributionManagement>-->
-        <!--<repository>-->
-            <!--<id>releases</id>-->
-            <!--<url>http://maven.aliyun.com/nexus/content/groups/public</url>-->
-        <!--</repository>-->
-        <!--<snapshotRepository>-->
-            <!--<id>snapshots</id>-->
-            <!--<url>http://maven.aliyun.com/nexus/content/groups/public</url>-->
-        <!--</snapshotRepository>-->
-    <!--</distributionManagement>-->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>https://maven.aliyun.com/repository/apache-snapshots</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>https://maven.aliyun.com/repository/apache-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
     <!-- maven-release-plugin插件配置 -->
     <build>
         <pluginManagement>
