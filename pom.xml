@@ -5,7 +5,7 @@
 
     <groupId>mySpring</groupId>
     <artifactId>mySpring</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>mySpring Maven Webapp</name>
@@ -48,12 +48,12 @@
 
     <distributionManagement>
         <repository>
-            <id>releases</id>
-            <url>https://maven.aliyun.com/repository/apache-snapshots</url>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/110378-release-5YOwwX/</url>
         </repository>
         <snapshotRepository>
-            <id>SNAPSHOT</id>
-            <url>https://maven.aliyun.com/repository/apache-snapshots</url>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/110378-snapshot-t3pphe/</url>
         </snapshotRepository>
     </distributionManagement>
     <!-- maven-release-plugin插件配置 -->
