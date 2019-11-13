@@ -5,7 +5,7 @@
 
     <groupId>mySpring</groupId>
     <artifactId>mySpring</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
 
     <name>mySpring Maven Webapp</name>
@@ -42,7 +42,7 @@
         <developerConnection>scm:git:https://github.com/wangdaisheng/mySpring.git
         </developerConnection>
         <url>https://github.com/wangdaisheng/mySpring.git</url>
-        <tag>mySpring-1.0.1</tag>
+        <tag>mySpring-1.0.3</tag>
     </scm>
 
 
